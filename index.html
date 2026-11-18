@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AxiSteer – a smart cane that steers</title>
+<meta name="description" content="AxiSteer is a smart cane design with a steerable wheel unit, built to give blind and partially sighted users guidance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <p class="brand"><a href="#main">AxiSteer</a></p>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#specs">Specifications</a></li>
+      <li><a href="#gallery">Images</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- DISPLAY OPTIONS: text size and colour theme. Choices are remembered (see script.js). -->
+<section class="options" aria-labelledby="opt-h">
+  <h2 id="opt-h">Display options</h2>
+  <div class="opt-row">
+    <div role="group" aria-label="Text size">
+      <button type="button" data-size="down" aria-label="Make text smaller">A−</button>
+      <button type="button" data-size="reset" aria-label="Reset text size">A</button>
+      <button type="button" data-size="up" aria-label="Make text larger">A+</button>
+    </div>
+    <label for="theme">Colour theme</label>
+    <select id="theme">
+      <option value="dark">Dark (default)</option>
+      <option value="contrast">High contrast: yellow on black</option>
+      <option value="light">Light: black on white</option>
+    </select>
+  </div>
+  <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+</section>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero" aria-labelledby="top-h">
+    <h1 id="top-h">AxiSteer</h1>
+    <p class="lead">A smart cane that steers, so you are guided rather than just warned.</p>
+    <!-- EDIT: change the link target to your repo, email or sign-up form -->
+    <p><a class="button" href="#contact">Get in touch</a></p>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About the design</h2>
+    <!-- EDIT: replace this text with your own words -->
+    <p>AxiSteer is a folding white cane with a small steerable wheel unit fitted near the base. A servo motor turns the wheel to help guide the user along a path.</p>
+    <p>The design keeps the familiar feel of a white cane. It adds a compact, enclosed housing and a 100&nbsp;mm wheel.</p>
+  </section>
+
+  <section id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How it works</h2>
+    <ol>
+      <li>The wheel sits inside a housing that is roughly 150&nbsp;mm tall.</li>
+      <li>A servo motor inside the housing turns the wheel left or right.</li>
+      <li>The servo attaches to the lower beam of the cane with a swivel ball joint. The joint lets the cane move freely while the wheel is steered.</li>
+      <li>The cane folds down for storage, like a standard folding white cane.</li>
+    </ol>
+  </section>
+
+  <section id="specs" aria-labelledby="specs-h">
+    <h2 id="specs-h">Specifications</h2>
+    <!-- EDIT: add or change rows. Keep one <tr> per specification. -->
+    <table>
+      <caption>Key measurements and parts</caption>
+      <thead><tr><th scope="col">Part</th><th scope="col">Detail</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Wheel diameter</th><td>100 mm</td></tr>
+        <tr><th scope="row">Housing height</th><td>Roughly 150 mm</td></tr>
+        <tr><th scope="row">Steering</th><td>Servo motor</td></tr>
+        <tr><th scope="row">Cane connection</th><td>Swivel ball joint to the lower beam</td></tr>
+        <tr><th scope="row">Cane type</th><td>Folding</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gallery" aria-labelledby="gal-h">
+    <h2 id="gal-h">Images of the design</h2>
+    <p>Each image has a text description. Open “Full description” under an image to read more.</p>
+
+    <!-- TO ADD AN IMAGE: copy one <figure> block, put your file in the images folder,
+         and change src, alt (short), and the description (longer). Never leave alt empty. -->
+
+    <figure>
+      <img src="images/overview.png" width="697" height="610"
+           alt="Overview sheet of the AxiSteer design showing the housing, the wheel and the cane, with measurements.">
+      <figcaption>Overview of the design with key measurements.</figcaption>
+      <details>
+        <summary>Full description</summary>
+        <p>A collage of four views. Top left: a side line drawing of the housing, marked roughly 150&nbsp;mm tall. Top right: a 3D view of the dished wheel, marked 100&nbsp;mm across, with a round hole at its centre. Bottom left: a see-through 3D line drawing of the housing. Bottom right: a photo of a folding white cane. A label says the servo attaches to the lower beam with a swivel ball joint, next to a cut-away photo of a ball joint.</p>
+      </details>
+    </figure>
+
+    <figure>
+      <img src="images/side-view.png" width="540" height="427"
+           alt="Side line drawing of the AxiSteer housing with a large circular wheel at the front.">
+      <figcaption>Side view.</figcaption>
+      <details>
+        <summary>Full description</summary>
+        <p>A flat line drawing. A large wheel made of several concentric circles sits low and left of centre. Above and behind it is a boxy body with a sloped front edge. Two small rectangular blocks sit on top, one left and one right, and a tall rectangle fills the right side.</p>
+      </details>
+    </figure>
+
+    <figure>
+      <img src="images/iso-solid.png" width="516" height="400"
+           alt="Solid 3D view of the AxiSteer housing from above and the side.">
+      <figcaption>Solid 3D view.</figcaption>
+      <details>
+        <summary>Full description</summary>
+        <p>A box-shaped housing with a sloped front face. A small cube-shaped block rises from the top left. The edge of the round wheel shows underneath the housing.</p>
+      </details>
+    </figure>
+
+    <figure>
+      <img src="images/iso-wireframe.png" width="514" height="399"
+           alt="See-through 3D wireframe of the AxiSteer housing showing the wheel and internal blocks.">
+      <figcaption>Wireframe 3D view.</figcaption>
+      <details>
+        <summary>Full description</summary>
+        <p>The same housing drawn as outlines only, so the inside is visible. The round wheel with its central hub sits in the middle. Several rectangular blocks inside show where parts are placed.</p>
+      </details>
+    </figure>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <!-- EDIT: put your real email and GitHub link -->
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Code and files: <a href="https://github.com/YOUR-USERNAME/YOUR-REPO">AxiSteer on GitHub</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year">2026</span> AxiSteer. This site works with screen readers, keyboard-only use and browser zoom.</p>
+  <p><a href="#main">Back to top</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
